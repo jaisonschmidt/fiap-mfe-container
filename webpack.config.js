@@ -15,8 +15,8 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "container",
       remotes: {
-        mfe1: "mfe1@http://localhost:4173/remoteEntry.js",
-        mfe2: "mfe2@http://localhost:4174/remoteEntry.js",
+        mfe1: env.VITE_MFE1_URL,
+        mfe2: env.VITE_MFE2_URL,
       },
     }),
   ],
